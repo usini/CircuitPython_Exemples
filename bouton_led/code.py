@@ -7,15 +7,15 @@ from time import sleep
 import board
 import digitalio
 
-broche_bouton = board.D5
-broche_led = board.BLUE_LED
+BROCHE_BOUTON = board.D5
+BROCHE_LED = board.BLUE_LED
 
 # Mise en place de la LED
-led = digitalio.DigitalInOut(board.BLUE_LED)
+led = digitalio.DigitalInOut(BROCHE_BOUTON)
 led.direction = digitalio.Direction.OUTPUT
 
 # Mise en place du bouton
-bouton = digitalio.DigitalInOut(board.D5)
+bouton = digitalio.DigitalInOut(BROCHE_LED)
 bouton.direction = digitalio.Direction.INPUT
 bouton.pull = digitalio.Pull.UP # Mode PullUp (inverse la logique!)
 
